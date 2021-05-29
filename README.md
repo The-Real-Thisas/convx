@@ -1,13 +1,8 @@
-[![License](https://img.shields.io/pypi/l/convx.svg)](https://github.com/The-Real-Thisas/convx/blob/main/LICENSE)
-
-[![Version](https://img.shields.io/pypi/v/convx.svg)](https://pypi.org/project/convx/)
-
-[![Python](https://img.shields.io/pypi/pyversions/convx.svg)](https://pypi.org/project/convx/)
-
-[![Code Style](https://img.shields.io/badge/codestyle-black-black.svg)](https://github.com/ambv/black)
-
-
 # Convx | A conversion tool for binary, hex, decimal.
+[![License](https://img.shields.io/pypi/l/convx.svg)](https://github.com/The-Real-Thisas/convx/blob/main/LICENSE)
+[![Version](https://img.shields.io/pypi/v/convx.svg)](https://pypi.org/project/convx/)
+[![Python](https://img.shields.io/pypi/pyversions/convx.svg)](https://pypi.org/project/convx/)
+[![Code Style](https://img.shields.io/badge/codestyle-black-black.svg)](https://github.com/ambv/black)
 
 This tool is created for a school lesson regarding Information Representation and conversion between binary, decimal and hex.
 
