@@ -8,7 +8,7 @@ This tool is created for a school lesson regarding Information Representation an
 
 Further, this tool has the additional functionality of adding and subtracting decimals, and converting between decimal and binary using two's compliment.
 
-...
+---
 
 ## Installation
 
@@ -18,7 +18,7 @@ To install Convx you can use `pip install`.
 pip install convx
 ```
 
-...
+---
 
 ## Usage
 
