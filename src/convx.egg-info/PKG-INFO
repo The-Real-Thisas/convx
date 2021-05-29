@@ -1,21 +1,16 @@
 Metadata-Version: 2.1
 Name: convx
-Version: 0.0.1
+Version: 0.0.2
 Summary: A package for quickly converting binary, hex and decimal to one another.
 Home-page: https://github.com/The-Real-Thisas/convx
 Author: Thisas
 Author-email: thisas@thisas.dev
 License: UNKNOWN
-Description: [![License](https://img.shields.io/pypi/l/convx.svg)](https://github.com/The-Real-Thisas/convx/blob/main/LICENSE)
-        
+Description: # Convx | A conversion tool for binary, hex, decimal.
+        [![License](https://img.shields.io/pypi/l/convx.svg)](https://github.com/The-Real-Thisas/convx/blob/main/LICENSE)
         [![Version](https://img.shields.io/pypi/v/convx.svg)](https://pypi.org/project/convx/)
-        
         [![Python](https://img.shields.io/pypi/pyversions/convx.svg)](https://pypi.org/project/convx/)
-        
         [![Code Style](https://img.shields.io/badge/codestyle-black-black.svg)](https://github.com/ambv/black)
-        
-        
-        # Convx | A conversion tool for binary, hex, decimal.
         
         This tool is created for a school lesson regarding Information Representation and conversion between binary, decimal and hex.
         
