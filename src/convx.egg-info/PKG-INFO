@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: convx
-Version: 0.0.2
+Version: 0.0.3
 Summary: A package for quickly converting binary, hex and decimal to one another.
 Home-page: https://github.com/The-Real-Thisas/convx
 Author: Thisas
@@ -16,7 +16,7 @@ Description: # Convx | A conversion tool for binary, hex, decimal.
         
         Further, this tool has the additional functionality of adding and subtracting decimals, and converting between decimal and binary using two's compliment.
         
-        ...
+        ---
         
         ## Installation
         
@@ -26,7 +26,7 @@ Description: # Convx | A conversion tool for binary, hex, decimal.
         pip install convx
         ```
         
-        ...
+        ---
         
         ## Usage
         
