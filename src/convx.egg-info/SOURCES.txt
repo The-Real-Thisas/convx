@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/convx.py
+src/convx.egg-info/PKG-INFO
+src/convx.egg-info/SOURCES.txt
+src/convx.egg-info/dependency_links.txt
+src/convx.egg-info/requires.txt
+src/convx.egg-info/top_level.txt
