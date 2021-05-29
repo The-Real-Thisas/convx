@@ -23,13 +23,13 @@ def decimalToBinary(x: int):
     binary = format(x, "b")
     # binary = "{0:b}".format(int(x))
     result = f"{x} to binary = {binary}"
-    return binary
     MEMORY.append(result)
     calculator.success(result)
+    return binary
 
 
 @calculator.command("btd")
-def binaryToDecimal(x):
+def binaryToDecimal(x: str):
     # i,integer = 0,0
     # size = len(x)
     # while i < len(x):
@@ -37,29 +37,29 @@ def binaryToDecimal(x):
     #     i+=1
     integer = int(x, 2)
     result = f"{x} to integer = {integer}"
-    return integer
     MEMORY.append(result)
     calculator.success(result)
+    return integer
 
 
 @calculator.command("dth")
-def decimalToHex(x):
+def decimalToHex(x: str):
     hex = format(int(x), "X")
     result = f"{x} to hex = {hex}"
-    return hex
     MEMORY.append(result)
     calculator.success(result)
+    return hex
 
 
 @calculator.command("bth")
-def binaryToHex(x):
+def binaryToHex(x: str):
     integer = int(x, 2)
     calculator.status("Converting to integer: ", x, "to", integer)
     hex = format(integer, "X")
     result = f"{x} to hex = {hex}"
-    return hex
     MEMORY.append(result)
     calculator.success(result)
+    return hex
 
 
 @calculator.command("add")
@@ -84,22 +84,23 @@ def addBinary(x: str, y: str):
     if carry != 0:
         calculator.info("- Carry !=0, adding 1 to start of", result)
         result = "1" + result
+        cleanReturn = result.zfill(max_len) 
     result = f"{x} + {y} = {result.zfill(max_len)}"
     # With Internal Functions
     # sum = bin(int(x, 2) + int(y, 2))
     # print(sum[2:])
-    return result.zfill(max_len)
     MEMORY.append(result)
     calculator.success(result)
+    return cleanReturn
 
 
 @calculator.command("sub")
 def subBinary(x: str, y: str):
     binary = bin(int(x, 2) - int(y, 2))[2:]
     result = f"{x} - {y} = {binary}"
-    return binary
     MEMORY.append(result)
     calculator.success(result)
+    return binary
 
 
 @calculator.command("2dtb")
@@ -129,9 +130,9 @@ def twoDenaryToBinary(x: int):
         binary = bin(int(binary, 2) + 1)[2:]
 
     result = f"{x} to binary = {binary}"
-    return binary
     MEMORY.append(result)
     calculator.success(result)
+    return binary
 
 
 @calculator.command("2btd")
@@ -161,9 +162,9 @@ def twoBinaryToDenary(x: str):
     else:
         calculator.error("Invalid Value")
     result = f"{x} to integer = {integer}"
-    return integer
     MEMORY.append(result)
     calculator.success(result)
+    return int(integer)
 
 
 @calculator.command("help")
