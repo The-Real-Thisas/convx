@@ -4,13 +4,13 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setup(
     name="convx",
-    version="0.0.9",
+    version="0.1.0",
     description="A package for quickly converting binary, hex and decimal to one another.",
     py_modules=["convx"],
     package_dir={"": "src"},
     entry_points='''
         [console_scripts]
-        convx=convx:calculator.run
+        convx=convx:main
     ''',
     classifiers=[
         "Programming Language :: Python :: 3",

@@ -1,4 +1,4 @@
 
         [console_scripts]
-        convx=convx:calculator.run
+        convx=convx:main
     

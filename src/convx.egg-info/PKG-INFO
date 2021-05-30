@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: convx
-Version: 0.0.9
+Version: 0.1.0
 Summary: A package for quickly converting binary, hex and decimal to one another.
 Home-page: https://github.com/The-Real-Thisas/convx
 Author: Thisas
