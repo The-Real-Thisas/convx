@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/pypi/v/convx.svg)](https://pypi.org/project/convx/)
 [![Python](https://img.shields.io/pypi/pyversions/convx.svg)](https://pypi.org/project/convx/)
 [![Code Style](https://img.shields.io/badge/codestyle-black-black.svg)](https://github.com/ambv/black)
+[![Build Status](https://dev.azure.com/Thisas/convx/_apis/build/status/The-Real-Thisas.convx?branchName=main)](https://dev.azure.com/Thisas/convx/_build/latest?definitionId=1&branchName=main)
 
 ![Banner](https://github.com/The-Real-Thisas/convx/blob/main/Convx-Logo/convx-banner.png)
 
