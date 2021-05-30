@@ -4,7 +4,7 @@
 [![Python](https://img.shields.io/pypi/pyversions/convx.svg)](https://pypi.org/project/convx/)
 [![Code Style](https://img.shields.io/badge/codestyle-black-black.svg)](https://github.com/ambv/black)
 
-![Banner](https://github.com/The-Real-Thisas/convx/blob/Convx-Logo/convx-banner.png)
+![Banner](https://github.com/The-Real-Thisas/convx/blob/main/Convx-Logo/convx-banner.png)
 
 This tool is created for a school lesson regarding Information Representation and conversion between binary, decimal and hex.
 
