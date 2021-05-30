@@ -1,7 +1,7 @@
 from riposte import Riposte
 
 print(
-"""
+    """
  ________  ________  ________   ___      ___ ___    ___ 
 |\   ____\|\   __  \|\   ___  \|\  \    /  /|\  \  /  /|
 \ \  \___|\ \  \|\  \ \  \\\\ \  \ \  \  /  / | \  \/  / /
@@ -84,7 +84,7 @@ def addBinary(x: str, y: str):
     if carry != 0:
         calculator.info("- Carry !=0, adding 1 to start of", result)
         result = "1" + result
-        cleanReturn = result.zfill(max_len) 
+        cleanReturn = result.zfill(max_len)
     result = f"{x} + {y} = {result.zfill(max_len)}"
     # With Internal Functions
     # sum = bin(int(x, 2) + int(y, 2))
