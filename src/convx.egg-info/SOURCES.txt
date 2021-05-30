@@ -10,5 +10,6 @@ src/__pycache__/main.cpython-38.pyc
 src/convx.egg-info/PKG-INFO
 src/convx.egg-info/SOURCES.txt
 src/convx.egg-info/dependency_links.txt
+src/convx.egg-info/entry_points.txt
 src/convx.egg-info/requires.txt
 src/convx.egg-info/top_level.txt
