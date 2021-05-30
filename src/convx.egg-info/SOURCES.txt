@@ -4,9 +4,6 @@ README.md
 setup.py
 test-convx.py
 __pycache__/test-convx.cpython-38-pytest-6.2.4.pyc
-dist/convx-0.0.2-py3-none-any.whl
-dist/convx-0.0.2.tar.gz
-dist/convx-0.0.3-py3-none-any.whl
 src/convx.py
 src/__pycache__/convx.cpython-38.pyc
 src/__pycache__/main.cpython-38.pyc
