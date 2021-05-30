@@ -4,3 +4,5 @@ nvim setup.py
 cd "Convx-Logo"
 python3 main.py
 cd ..
+pip3 install -e .
+pip3 install -e ."[dev]"
