@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setup(
     name="convx",
-    version="0.0.5",
+    version="0.0.6",
     description="A package for quickly converting binary, hex and decimal to one another.",
     py_modules=["convx"],
     package_dir={"": "src"},
