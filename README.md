@@ -9,7 +9,10 @@
 
 This tool is created for a school lesson regarding Information Representation and conversion between binary, decimal and hex.
 
-Further, this tool has the additional functionality of adding and subtracting decimals, and converting between decimal and binary using two's compliment.
+Further, this tool has the additional functionality of:
+- Adding and subtracting binary. 
+- Converting between decimal and binary using two's compliment.
+- Converting between decimal and BCD. 
 
 ---
 
@@ -25,8 +28,40 @@ pip install convx
 
 ## Usage
 
-Simply import Conx using `import`. Then use as seen in the example of a cli program below.
+Simply import Conx using `import`. The functions available are listed below.
 
+```python
+# Decimal to Binary
+decimalToBinary(x: int)
+
+# Binary to Decimal
+binaryToDecimal(x: str)
+
+# Decimal to Hex 
+decimalToHex(x: str)
+
+# Binary to Hex
+binaryToHex(x: str)
+
+# Decimal to BCD
+decimalToBCD(x: int)
+
+# BCD to Decimal
+bcdToDecimal(x: str)
+
+# Adding Binary
+addBinary(x: str, y: str)
+
+# Subtracting Binary
+subBinary(x:str , y: str)
+
+# Binary to Denary using two's compliment
+twoBinaryToDenary(x: str)
+
+# Denary to Binary using two's compliment
+twoDenaryToBinary(x: int)
+```
+An example usage of Convx for a cli is given below :
 ```python
 from convx import *
 
@@ -46,6 +81,14 @@ try:
     elif str(sys.argv[1]) == "bth":
         hex = binaryToHex(str(sys.argv[2]))
         result = f"[*] {str(sys.argv[2])} to hex = {hex}"
+        print(result)
+   elif str(sys.argv[1]) == "dtbcd":
+        bcd = decimalToBCD(str(sys.argv[2]))
+        result = f"[*] {str(sys.argv[2])} to BCD = {bcd}"
+        print(result)
+   elif str(sys.argv[1]) == "bcdtd":
+        decimal = bcdToDecimal(str(sys.argv[2]))
+        result = f"[*] {str(sys.argv[2])} to BCD = {decimal}"
         print(result)
     elif str(sys.argv[1]) == "add":
         binary = addBinary(str(sys.argv[2]), str(sys.argv[3]))
@@ -68,7 +111,6 @@ try:
 except IndexError:
     print("[*] No arguments inputed. Exiting.")
 ```
-
 ---
 
 ## Update Log
