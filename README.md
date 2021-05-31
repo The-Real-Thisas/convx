@@ -27,7 +27,7 @@ pip install convx
 
 Simply import Conx using `import`. Then use as seen in the example of a cli program below.
 
-```bash
+```python
 from convx import *
 
 try:
@@ -68,4 +68,14 @@ try:
 except IndexError:
     print("[*] No arguments inputed. Exiting.")
 ```
+
+---
+
+## Update Log
+
+### 0.1.1
+
+- Added decimal to BCD and BCD to decimal.
+- Added pytest for decimal to BCD and BCD to decimal.
+- Added 'help' text at banner information.
 

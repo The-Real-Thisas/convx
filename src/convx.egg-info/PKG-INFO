@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: convx
-Version: 0.1.0
+Version: 0.1.1
 Summary: A package for quickly converting binary, hex and decimal to one another.
 Home-page: https://github.com/The-Real-Thisas/convx
 Author: Thisas
@@ -35,7 +35,7 @@ Description: # Convx | A conversion tool for binary, hex, decimal.
         
         Simply import Conx using `import`. Then use as seen in the example of a cli program below.
         
-        ```bash
+        ```python
         from convx import *
         
         try:
@@ -76,6 +76,16 @@ Description: # Convx | A conversion tool for binary, hex, decimal.
         except IndexError:
             print("[*] No arguments inputed. Exiting.")
         ```
+        
+        ---
+        
+        ## Update Log
+        
+        ### 0.1.1
+        
+        - Added decimal to BCD and BCD to decimal.
+        - Added pytest for decimal to BCD and BCD to decimal.
+        - Added 'help' text at banner information.
         
         
 Platform: UNKNOWN

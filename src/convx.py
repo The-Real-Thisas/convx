@@ -15,7 +15,7 @@ def main():
        \ \_______\ \_______\ \__\\\\ \__\ \__/ /   /  /\   \  
         \|_______|\|_______|\|__| \|__|\|__|/   /__/ /\ __\ 
                                                 |__|/ \|__| 
-                                                            
+    Type "help" for help.                                                        
     """
     )
     calculator.run()
@@ -63,6 +63,63 @@ def binaryToHex(x: str):
     calculator.success(result)
     return hex
 
+@calculator.command("dtbcd")
+def decimalToBCD(x: int):
+    n = x
+    bcdList = []
+    if (n == 0):
+        bcd = "0000"
+        result = f"{x} to BCD = {bcd}"
+        MEMORY.append(result)
+        calculator.success(result)
+        return bcd
+    rev = 0
+    while (n > 0):
+        rev = rev * 10 + (n % 10)
+        n = n // 10
+    while (rev > 0):
+        b = str(rev % 10)
+        bcdListItem = str("{0:04b}".format(int(b, 16)))
+        bcdList.append(bcdListItem)
+        rev = rev // 10
+    bcd = " ".join(bcdList)
+    result = f"{x} to BCD = {bcd}"
+    MEMORY.append(result)
+    calculator.success(result)
+    return bcd
+
+@calculator.command("bcdtd")
+def bcdToDecimal(x: str):
+    length = len(x)
+    check = 0
+    check0 = 0
+    num = 0
+    sum = 0
+    mul = 1
+    rev = 0
+    for i in range(length - 1, -1, -1):
+        sum += (ord(x[i]) - ord('0')) * mul
+        mul *= 2 
+        check += 1 
+        if (check == 4 or i == 0):
+            if (sum == 0 and check0 == 0):
+                num = 1 
+                check0 = 1 
+            else:
+                num = num * 10 + sum
+            check = 0 
+            sum = 0 
+            mul = 1 
+    while (num > 0):
+        rev = rev * 10 + (num % 10)
+        num //= 10
+    if (check0 == 1):
+        rev -= 1 
+    decimal = rev
+    result = f"{x} to decimal = {decimal}"
+    MEMORY.append(result)
+    calculator.success(result)
+    return decimal
 
 @calculator.command("add")
 def addBinary(x: str, y: str):
@@ -178,7 +235,9 @@ def help():
       - Decimal to Binary : dtb
       - Binary to Decimal : btd
       - Decimal to hex    : dth
-      - Binary to hex     : bth  
+      - Binary to hex     : bth
+      - Decimal to BCD    : dtbcd
+      - BCD to Decimal    : bcdtd
 
     - Adding Binary
       - Command           : add
@@ -204,6 +263,8 @@ def help():
       - Binary to Decimal : btd
       - Decimal to hex    : dth
       - Binary to hex     : bth  
+      - Decimal to BCD    : dtbcd
+      - BCD to Decimal    : bcdtd
 
     - Adding Binary
       - Command           : add
