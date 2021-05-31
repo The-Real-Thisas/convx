@@ -115,9 +115,13 @@ except IndexError:
 
 ## Update Log
 
+### 0.1.2
+
+- Added usage in README.
+- Updated example cli code.
+
 ### 0.1.1
 
 - Added decimal to BCD and BCD to decimal.
 - Added pytest for decimal to BCD and BCD to decimal.
 - Added 'help' text at banner information.
-
