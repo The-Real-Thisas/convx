@@ -8,10 +8,10 @@ setup(
     description="A package for quickly converting binary, hex and decimal to one another.",
     py_modules=["convx"],
     package_dir={"": "src"},
-    entry_points='''
+    entry_points="""
         [console_scripts]
         convx=convx:main
-    ''',
+    """,
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",

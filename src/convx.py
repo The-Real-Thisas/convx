@@ -4,21 +4,24 @@ calculator = Riposte(prompt="▲:~$ ")
 
 MEMORY = []
 
+
 def main():
     print(
         r"""
-     ________  ________  ________   ___      ___ ___    ___ 
-    |\   ____\|\   __  \|\   ___  \|\  \    /  /|\  \  /  /|
-    \ \  \___|\ \  \|\  \ \  \\\\ \  \ \  \  /  / | \  \/  / /
-     \ \  \    \ \  \\\\\  \ \  \\\\ \  \ \  \/  / / \ \    / / 
-      \ \  \____\ \  \\\\\  \ \  \\\\ \  \ \    / /   /     \/  
-       \ \_______\ \_______\ \__\\\\ \__\ \__/ /   /  /\   \  
-        \|_______|\|_______|\|__| \|__|\|__|/   /__/ /\ __\ 
-                                                |__|/ \|__| 
+ ________  ________  ________   ___      ___ ___    ___ 
+|\   ____\|\   __  \|\   ___  \|\  \    /  /|\  \  /  /|
+\ \  \___|\ \  \|\  \ \  \\ \  \ \  \  /  / | \  \/  / /
+ \ \  \    \ \  \\\  \ \  \\ \  \ \  \/  / / \ \    / / 
+  \ \  \____\ \  \\\  \ \  \\ \  \ \    / /   /     \/  
+   \ \_______\ \_______\ \__\\ \__\ \__/ /   /  /\   \  
+    \|_______|\|_______|\|__| \|__|\|__|/   /__/ /\ __\ 
+                                            |__|/ \|__| 
+                                                        
     Type "help" for help.                                                        
     """
     )
     calculator.run()
+
 
 @calculator.command("dtb")
 def decimalToBinary(x: int):
@@ -63,21 +66,22 @@ def binaryToHex(x: str):
     calculator.success(result)
     return hex
 
+
 @calculator.command("dtbcd")
 def decimalToBCD(x: int):
     n = x
     bcdList = []
-    if (n == 0):
+    if n == 0:
         bcd = "0000"
         result = f"{x} to BCD = {bcd}"
         MEMORY.append(result)
         calculator.success(result)
         return bcd
     rev = 0
-    while (n > 0):
+    while n > 0:
         rev = rev * 10 + (n % 10)
         n = n // 10
-    while (rev > 0):
+    while rev > 0:
         b = str(rev % 10)
         bcdListItem = str("{0:04b}".format(int(b, 16)))
         bcdList.append(bcdListItem)
@@ -87,6 +91,7 @@ def decimalToBCD(x: int):
     MEMORY.append(result)
     calculator.success(result)
     return bcd
+
 
 @calculator.command("bcdtd")
 def bcdToDecimal(x: str):
@@ -98,28 +103,29 @@ def bcdToDecimal(x: str):
     mul = 1
     rev = 0
     for i in range(length - 1, -1, -1):
-        sum += (ord(x[i]) - ord('0')) * mul
-        mul *= 2 
-        check += 1 
-        if (check == 4 or i == 0):
-            if (sum == 0 and check0 == 0):
-                num = 1 
-                check0 = 1 
+        sum += (ord(x[i]) - ord("0")) * mul
+        mul *= 2
+        check += 1
+        if check == 4 or i == 0:
+            if sum == 0 and check0 == 0:
+                num = 1
+                check0 = 1
             else:
                 num = num * 10 + sum
-            check = 0 
-            sum = 0 
-            mul = 1 
-    while (num > 0):
+            check = 0
+            sum = 0
+            mul = 1
+    while num > 0:
         rev = rev * 10 + (num % 10)
         num //= 10
-    if (check0 == 1):
-        rev -= 1 
+    if check0 == 1:
+        rev -= 1
     decimal = rev
     result = f"{x} to decimal = {decimal}"
     MEMORY.append(result)
     calculator.success(result)
     return decimal
+
 
 @calculator.command("add")
 def addBinary(x: str, y: str):
@@ -297,4 +303,3 @@ def close():
 
 if __name__ == "__main__":
     main()
-

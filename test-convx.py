@@ -32,8 +32,10 @@ def test_convx_twoDenaryToBinary():
 def test_convx_twoBinaryToDenary():
     assert twoBinaryToDenary("100111") == -25
 
+
 def test_convx_decimalToBCD():
     assert decimalToBCD(12) == "0001 0010"
+
 
 def test_convx_bcdToDecimal():
     assert bcdToDecimal("00010010") == 12
